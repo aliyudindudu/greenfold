@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Heart, ShoppingBag, Eye } from 'lucide-react';
+import Link from 'next/link';
 
 const products = [
   { id: 1, name: 'Geometric Lamp', category: 'Decor', price: '$45' },
@@ -87,9 +88,12 @@ export default function Catalog() {
               preserving the story of its material while serving a new purpose.
             </p>
           </div>
-          <button className="px-6 py-3 border-2 border-espresso text-espresso font-stencil hover:bg-espresso hover:text-paper transition-colors">
+          <Link 
+            href="/crafts"
+            className="px-6 py-3 border-2 border-espresso text-espresso font-stencil hover:bg-espresso hover:text-paper transition-colors"
+          >
             View All Crafts
-          </button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
